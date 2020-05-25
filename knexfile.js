@@ -11,16 +11,22 @@ var connection = {
   charset: "utf8"
 };
 
+// sqlite
 if (process.env.DB_CLIENT === "sqlite") {
   connection = {
     filename: process.env.DB_DATABASE
   };
 }
 
+// postgre sql with connection string
+if (process.env.DB_CLIENT === "pg" && process.env.PG_CONNECTION_STRING) {
+  connection = process.env.PG_CONNECTION_STRING;
+}
+
 module.exports = {
   client: process.env.DB_CLIENT,
   useNullAsDefault: process.env.DB_CLIENT === "sqlite" ? true : null,
-  connection,
+  connection: connection,
   migrations: {
     tableName: "migrations",
     directory: "./database/migrations"
