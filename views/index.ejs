@@ -1,0 +1,142 @@
+<% layout('layout') -%> <% if (latest) { %>
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <p class="lead">पछिल्लो तथ्यांक अपडेट</p>
+  <%= moment(latest.last_updated_at).locale('ne').format('LLL'); %>
+</div>
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">PCR परिक्षण गरिएको</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          <%= getNepaliNumber(latest.pcr_sample_tested) %>
+        </h1>
+      </div>
+    </div>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">संक्रमण देखिएको (PCR)</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          <%= getNepaliNumber(latest.pcr_positive) %>
+        </h1>
+      </div>
+    </div>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">निको भएको</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          <%= getNepaliNumber(latest.recovered) %>
+        </h1>
+      </div>
+    </div>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">मृत्यु भएको</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          <%= getNepaliNumber(latest.death) %>
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- timeline -->
+  <div class="container">
+    <div id="timeline">
+      <div class="row timeline-movement timeline-movement-top">
+        <div class="timeline-badge timeline-future-movement">
+          <a href="#">
+            <i class="fas fa-plus"></i>
+          </a>
+        </div>
+        <div class="timeline-badge timeline-filter-movement">
+          <a href="#">
+            <i class="far fa-clock"></i>
+          </a>
+        </div>
+      </div>
+      <% Object.keys(stats).forEach(function(date) { %>
+      <div class="row timeline-movement">
+        <div class="timeline-badge">
+          <span class="timeline-balloon-date-day"
+            ><%= moment(date).locale('ne').format('LL').split(' ')[0]; %></span
+          >
+          <span class="timeline-balloon-date-month"
+            ><%= moment(date).locale('ne').format('LL').split(' ')[1]; %></span
+          >
+        </div>
+        <% stats[date].forEach(function(record, index) { %>
+        <div class="col-sm-6  timeline-item">
+          <div class="row">
+            <div class="col-sm-11">
+              <div
+                class="timeline-panel <%= (index % 2) === 0 ? 'credits' : 'debits' %>"
+              >
+                <ul class="timeline-panel-ul">
+                  <li>
+                    <span class="causale">PCR परिक्षण गरिएको</span>
+                    <br />
+                    <%= getNepaliNumber(record.pcr_sample_tested) %>
+                  </li>
+                  <li>
+                    <span class="causale">संक्रमण देखिएको (PCR) </span>
+                    <br />
+                    <%= getNepaliNumber(record.pcr_positive) %>
+                  </li>
+                  <li>
+                    <span class="causale">संक्रमण नदेखिएको (PCR) </span>
+                    <br />
+                    <%= getNepaliNumber(record.pcr_negative) %>
+                  </li>
+                  <li>
+                    <span class="causale">निको भएको </span>
+                    <br />
+                    <%= getNepaliNumber(record.recovered) %>
+                  </li>
+                  <li>
+                    <span class="causale">मृत्यु भएको </span>
+                    <br />
+                    <%= getNepaliNumber(record.death) %>
+                  </li>
+                  <li>
+                    <span class="causale">RDT परिक्षण गरिएको </span>
+                    <br />
+                    <%= getNepaliNumber(record.rdt_sample_tested) %>
+                  </li>
+                  <br />
+                  <li>
+                    <p>
+                      <small class="text-muted">
+                        <i class="glyphicon glyphicon-time"></i>
+                        <%=moment(record.last_updated_at).locale('ne').format('LLL')
+                        %>
+                      </small>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <% }); %>
+      </div>
+      <% }); %>
+
+      <!--due -->
+    </div>
+  </div>
+</div>
+<% } else { %>
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <p class="lead">हाल कुनै तथ्यांक उपलब्ध छैन |</p>
+</div>
+<% } %>
