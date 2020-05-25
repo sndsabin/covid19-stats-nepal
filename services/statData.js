@@ -51,7 +51,9 @@ var sync = async function() {
   // only save if the data is fresh
   if (
     !lastRecord ||
-    moment(data.last_updated_at).isAfter(lastRecord.last_updated_at)
+    (data &&
+      data.last_updated_at &&
+      moment(data.last_updated_at).isAfter(lastRecord.last_updated_at))
   ) {
     statService.create(data); // save in database
     logger.info("New record saved", data);
