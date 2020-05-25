@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+var statDataService = require("../services/statData");
+var logger = require("../utils/logger").logger;
+
+// sync the data
+logger.debug("worker running " + new Date());
+statDataService.sync();
