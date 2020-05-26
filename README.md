@@ -8,6 +8,7 @@
 ## Tweet
 
 ![Tweet](docs/tweet.png)
+![Tweet](docs/tweet-ii.png)
 
 ## Prerequisites
 
@@ -85,6 +86,7 @@ yarn knex --help
 - SQLite (default) with support for MySQL and PostgreSQL
 - [dotenv](https://www.npmjs.com/package/dotenv) for configuration management
 - [winston](https://www.npmjs.com/package/winston) for logging
+- [jest](https://www.npmjs.com/package/jest), [supertest](https://www.npmjs.com/package/supertest) for testing
 
 ## Credits
 
