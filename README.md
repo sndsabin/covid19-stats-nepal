@@ -86,6 +86,10 @@ yarn knex --help
 - [dotenv](https://www.npmjs.com/package/dotenv) for configuration management
 - [winston](https://www.npmjs.com/package/winston) for logging
 
+## Template
+
+Uses [Bootstrap Pricing](https://getbootstrap.com/docs/4.5/examples/pricing/) and [Timeline]()
+
 ## License
 
 [GNU General Public License v3.0](LICENSE)
