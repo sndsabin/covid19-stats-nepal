@@ -33,7 +33,7 @@
    DB_DATABASE=./storage/covid19-stats-nepal.sqlite
    ```
 
-   - If you wish to cron to run every minute inorder to fetch the data and the listed attributes (`recovered`, `pcr_positive`, `pcr_sample_tested`) to be observed for change. add these below env variables to `.env`
+   - If you wish to cron to run **every minute inorder** to fetch the data and the listed attributes (`recovered`, `pcr_positive`, `pcr_sample_tested`) to be observed for change. add these below env variables to `.env`
 
    ```
    STAT_CRON_EXPRESSION=* * * * *
@@ -77,3 +77,15 @@ yarn worker
 ```bash
 yarn knex --help
 ```
+
+## Uses:
+
+- ES7 [async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
+- [Bookshelf](http://bookshelfjs.org/) ORM and [Knex](http://knexjs.org/) migrations
+- SQLite (default) with support for MySQL and PostgreSQL
+- [dotenv](https://www.npmjs.com/package/dotenv) for configuration management
+- [winston](https://www.npmjs.com/package/winston) for logging
+
+## License
+
+[GNU General Public License v3.0](LICENSE)
