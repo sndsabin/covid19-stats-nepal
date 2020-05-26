@@ -61,10 +61,10 @@
    ```
 4. Start the application
 
-```bash
-yarn dev (for development)
-NODE_ENV=production yarn start (for production)
-```
+   ```bash
+   yarn dev (for development)
+   NODE_ENV=production yarn start (for production)
+   ```
 
 ### To run the worker manually
 
