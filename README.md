@@ -89,6 +89,7 @@ yarn knex --help
 - [dotenv](https://www.npmjs.com/package/dotenv) for configuration management
 - [winston](https://www.npmjs.com/package/winston) for logging
 - [jest](https://www.npmjs.com/package/jest), [supertest](https://www.npmjs.com/package/supertest) for testing
+- [Standard JS](https://standardjs.com/) for code linting
 
 ## Credits
 
