@@ -86,9 +86,9 @@ yarn knex --help
 - [dotenv](https://www.npmjs.com/package/dotenv) for configuration management
 - [winston](https://www.npmjs.com/package/winston) for logging
 
-## Template
+## Credits
 
-Uses [Bootstrap Pricing](https://getbootstrap.com/docs/4.5/examples/pricing/) and [Timeline]()
+Template : [Bootstrap Pricing](https://getbootstrap.com/docs/4.5/examples/pricing), Timeline: [Brady Wright](https://codepen.io/brady_wright/pen/NNOvrW)
 
 ## License
 
