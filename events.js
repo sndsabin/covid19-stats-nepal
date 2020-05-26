@@ -1,33 +1,33 @@
-var EventEmitter = require("events").EventEmitter;
-var newDataInserted = require("./events/newDataInserted");
+var EventEmitter = require('events').EventEmitter
+var newDataInserted = require('./events/newDataInserted')
 
 /***
  * Register all the events
  */
-const events = [newDataInserted];
+const events = [newDataInserted]
 
-var boot = function() {
-  const modes = ["on", "once"];
-  events.forEach(function(event) {
+var boot = function () {
+  const modes = ['on', 'once']
+  events.forEach(function (event) {
     if (event.emitter instanceof EventEmitter === false) {
-      throw event.eventName + "'s emitter must be instance of" + EventEmitter;
+      throw new Error(event.eventName + "'s emitter must be instance of" + EventEmitter)
     }
-    var mode = modes.includes(event.mode) ? event.mode : "on";
+    var mode = modes.includes(event.mode) ? event.mode : 'on'
 
     // register listeners
-    event.listeners.forEach(function(listener) {
+    event.listeners.forEach(function (listener) {
       if (listener instanceof Function === false) {
-        throw listener +
-          " of event " +
+        throw new Error(listener +
+          ' of event ' +
           event.eventName +
-          " must be of type function";
+          ' must be of type function')
       }
 
-      event["emitter"][mode](event.eventName, function() {
-        listener(event.data);
-      });
-    });
-  });
-};
+      event.emitter[mode](event.eventName, function () {
+        listener(event.data)
+      })
+    })
+  })
+}
 
-module.exports = { boot };
+module.exports = { boot }

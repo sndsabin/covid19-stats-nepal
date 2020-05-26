@@ -1,13 +1,13 @@
-var bookshelf = require("../db");
-var moment = require("moment");
+var bookshelf = require('../db')
+var moment = require('moment')
 
 var Stat = bookshelf.Model.extend({
-  tableName: "stats",
+  tableName: 'stats',
   virtuals: {
-    last_updated_date() {
-      return moment(this.get("last_updated_at")).format("YYYY-MM-DD");
+    last_updated_date () {
+      return moment(this.get('last_updated_at')).format('YYYY-MM-DD')
     }
   }
-});
+})
 
-module.exports = Stat;
+module.exports = Stat

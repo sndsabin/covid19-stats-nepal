@@ -1,12 +1,12 @@
-var axios = require("axios");
+var axios = require('axios')
 
-var get = function(url, params) {
+var get = function (url, params) {
   // Get Request
   return axios({
-    method: "GET",
+    method: 'GET',
     url: url,
     params: params
-  });
-};
+  })
+}
 
-module.exports = { get };
+module.exports = { get }

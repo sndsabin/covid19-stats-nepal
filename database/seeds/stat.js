@@ -1,13 +1,13 @@
-var factory = require("../factories/stat");
+var factory = require('../factories/stat')
 
-var stat = factory("stat", 20);
+var stat = factory('stat', 20)
 
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex("stats")
+  return knex('stats')
     .del()
-    .then(function() {
+    .then(function () {
       // Inserts seed entries
-      return knex("stats").insert(stat);
-    });
-};
+      return knex('stats').insert(stat)
+    })
+}

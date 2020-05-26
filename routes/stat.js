@@ -1,9 +1,9 @@
-var express = require("express");
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
 
-var StatController = require("../controllers/stats");
+var StatController = require('../controllers/stats')
 
 /* GET home page. */
-router.get("/", StatController.index);
+router.get('/', StatController.index)
 
-module.exports = router;
+module.exports = router

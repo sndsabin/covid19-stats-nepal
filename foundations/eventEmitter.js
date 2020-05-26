@@ -1,12 +1,12 @@
-var EventEmitter = require("events").EventEmitter;
+var EventEmitter = require('events').EventEmitter
 
 module.exports = {
   eventEmitter: null,
-  get: function() {
+  get: function () {
     if (!this.eventEmitter) {
-      this.eventEmitter = new EventEmitter();
+      this.eventEmitter = new EventEmitter()
     }
 
-    return this.eventEmitter;
+    return this.eventEmitter
   }
-};
+}

@@ -1,10 +1,10 @@
-var express = require("express");
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
 
-var stat = require("./routes/stat");
+var stat = require('./routes/stat')
 /**
  * Register all routes here
  */
-router.use("/", stat);
+router.use('/', stat)
 
-module.exports = router;
+module.exports = router
