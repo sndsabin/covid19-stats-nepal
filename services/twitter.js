@@ -12,20 +12,24 @@ try {
     strictSSL: true // optional - requires SSL certificates to be valid.
   });
 } catch (error) {
-  logger.info("Error while initiliazing Twit client");
+  logger.info("Error while initializing Twit client");
   var twit = {
-    post: function() {} // dummy function
+    post: function() {
+      logger.info(
+        "No status was posted due to error in initializing Twit client"
+      ); // dummy function
+    }
   };
 }
 
 var tweet = function(status) {
+  logger.info("trying to post new tweet : " + status);
   twit.post("statuses/update", { status: status }, function(
     error,
     data,
     response
   ) {
-    logger.info("Posting new tweet : " + status);
-    logger.info("twitter data : " + JSON.stringify(data));
+    logger.info("twitter response data : " + JSON.stringify(data));
   });
 };
 
