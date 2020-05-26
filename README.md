@@ -46,13 +46,13 @@
 2. Run migration
 
    ```bash
-       yarn run knex migrate:latest
+    yarn run knex migrate:latest
    ```
 
    if you wish to seed
 
    ```bash
-       yarn run knex seed:run
+    yarn run knex seed:run
    ```
 
 3. Add [Twitter Secrets]('https://developer.twitter.com/') to `.env`
