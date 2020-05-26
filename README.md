@@ -5,6 +5,8 @@
 <p><a href="https://twitter.com/StatsNepal" target="_blank" rel="noopener">Bot</a> that tweets the Covid19 Stats Of Nepal.
 </div>
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 ## Tweet
 
 ![Tweet](docs/tweet.png)
