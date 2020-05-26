@@ -12,10 +12,10 @@ var stat = define('stat', function (faker) {
     recovered: faker.random.number({ min: 0, max: pcrPositive }),
     isolation: faker.random.number(),
     quarrentine: faker.random.number(),
-    pcrPositive: pcrPositive,
+    pcr_positive: pcrPositive,
     pcr_negative: pcrSampleTested - pcrPositive,
-    pcrSampleTested: pcrSampleTested,
-    rdtSampleTested: rdtSampleTested,
+    pcr_sample_tested: pcrSampleTested,
+    rdt_sample_tested: rdtSampleTested,
     last_updated_at: moment(faker.date.future(0.1)).format(
       'YYYY-MM-DD HH:mm:ss'
     )
