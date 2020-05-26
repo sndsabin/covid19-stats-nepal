@@ -235,3 +235,8 @@
 .marker-outline .timeline-item:hover .timeline-marker:before {
   background: #ff6b6b;
 }
+
+/** Card **/
+.card-header {
+  height: 82px;
+}
