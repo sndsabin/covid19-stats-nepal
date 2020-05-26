@@ -237,6 +237,14 @@
 }
 
 /** Card **/
-.card-header {
-  height: 82px;
+@media (min-width: 768px) {
+  .card-header {
+    height: 110px;
+  }
 }
+@media (min-width: 992px) {
+  .card-header {
+    height: 82px;
+  }
+}
+
