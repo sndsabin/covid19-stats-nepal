@@ -1,3 +1,9 @@
+.container-fluid .row {
+  padding: 0 0 4em 0;
+}
+.container-fluid .row:nth-child(even) {
+  background: #f1f4f5;
+}
 .example-title {
   text-align: center;
   margin-bottom: 60px;
