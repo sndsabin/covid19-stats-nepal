@@ -2,9 +2,7 @@ var getNepaliNumber = function (number) {
   var nepaliDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९']
   var result = ''
 
-  number = new Intl.NumberFormat('en-IN', {
-    maximumSignificantDigits: 3
-  }).format(number) // add comma
+  number = new Intl.NumberFormat('en-IN').format(number) // add comma
 
   String(number)
     .split('')
