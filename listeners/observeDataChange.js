@@ -1,5 +1,6 @@
 var messageUtils = require('../utils/message')
 var twitter = require('../services/twitter')
+var logger = require('../utils/logger').logger
 
 var observeDataChange = function (data) {
   var dataToBeObserved = process.env.DATA_TO_BE_OBSERVED
@@ -22,6 +23,7 @@ var observeDataChange = function (data) {
 
   // prepare message
   var message = messageUtils.prepareMessage(isMisleading, newRecord, delta)
+  logger.info('message: ' + message)
 
   // notify
   twitter.tweet(message)
