@@ -236,6 +236,11 @@
   background: #ff6b6b;
 }
 
+.stats-timeline-container {
+  height: 1000px;
+  overflow-y: scroll;
+}
+
 /** Card **/
 @media (min-width: 768px) {
   .card-header {
@@ -247,4 +252,3 @@
     height: 82px;
   }
 }
-
