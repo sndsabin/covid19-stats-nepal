@@ -1,5 +1,5 @@
 var moment = require('moment')
-var getNepaliNumber = require('../utils/misc').getNepaliNumber
+var getNepaliNumber = require('get-nepali-number')
 
 var prepareMessage = function (isMisleading, newRecord, delta) {
   var message = ''

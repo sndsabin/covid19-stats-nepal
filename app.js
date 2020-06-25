@@ -4,9 +4,9 @@ var path = require('path')
 var cookieParser = require('cookie-parser')
 var morgan = require('morgan')
 var logger = require('./utils/logger')
-var miscUtils = require('./utils/misc')
 var ejsMate = require('ejs-mate')
 var moment = require('moment')
+var getNepaliNumber = require('get-nepali-number')
 
 var routes = require('./routes')
 var crons = require('./crons')
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', routes)
 
 // register helpers
-app.locals.getNepaliNumber = miscUtils.getNepaliNumber
+app.locals.getNepaliNumber = getNepaliNumber
 
 app.locals.moment = moment
 
