@@ -9,6 +9,8 @@ var observeDataChange = function (data) {
   var delta = []
   var isMisleading = false
 
+  logger.info('observeDataChange listener evoked!')
+
   dataToBeObserved.split(',').forEach(function (atribute) {
     if (lastRecord && newRecord) {
       // calculate delta
