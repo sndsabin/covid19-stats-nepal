@@ -9,8 +9,8 @@ module.exports = {
   data: null,
   mode: 'on',
   emit: function (data) {
-    logger.info('Emitting New Data Inserted Event!')
     this.data = data
     this.emitter.emit(this.eventName, this.data)
+    logger.info('Emitting New Data Inserted Event!')
   }
 }
