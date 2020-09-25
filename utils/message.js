@@ -8,6 +8,10 @@ var prepareMessage = function (isMisleading, newRecord, delta) {
     message = 'सम्भवत तथ्यांक सच्याएको हुन सक्छ। पछिल्लो तथ्यांक यस प्रकार छ : '
   }
 
+  if (!newRecord) {
+    return message;
+  }
+
   message += 'निको भएको : ' + getNepaliNumber(newRecord.recovered)
   if (!isMisleading && delta.recovered) {
     message += '(+' + getNepaliNumber(delta.recovered) + ')'
