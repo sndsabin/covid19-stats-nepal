@@ -9,7 +9,7 @@ var prepareMessage = function (isMisleading, newRecord, delta) {
   }
 
   if (!newRecord) {
-    return message;
+    return message
   }
 
   message += 'निको भएको : ' + getNepaliNumber(newRecord.recovered)
