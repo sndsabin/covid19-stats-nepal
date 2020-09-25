@@ -21,7 +21,9 @@ var prepareMessage = function (isMisleading, newRecord, delta) {
     message += '(+' + getNepaliNumber(delta.death) + ')'
   }
   message +=
-    '\n संक्रमण देखिएको (PCR) : ' + getNepaliNumber(newRecord.pcr_positive)
+    '\n सक्रिय संक्रमित : ' + getNepaliNumber(newRecord.pcr_positive - newRecord.recovered)
+  message +=
+    '\n कुल संक्रमण देखिएको (PCR) : ' + getNepaliNumber(newRecord.pcr_positive)
   if (!isMisleading && delta.pcr_positive) {
     message += '(+' + getNepaliNumber(delta.pcr_positive) + ')'
   }

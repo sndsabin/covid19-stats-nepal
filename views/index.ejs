@@ -18,7 +18,17 @@
     </div>
     <div class="card mb-3 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">संक्रमण देखिएको (PCR)</h4>
+        <h4 class="my-0 font-weight-normal">सक्रिय संक्रमित</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          <%= getNepaliNumber(latest.pcr_positive - latest.recovered) %>
+        </h1>
+      </div>
+    </div>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">कुल संक्रमण देखिएको (PCR)</h4>
       </div>
       <div class="card-body">
         <h1 class="card-title pricing-card-title">
