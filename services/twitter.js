@@ -23,7 +23,7 @@ try {
 }
 
 var tweet = function (status) {
-  logger.info('trying to post new tweet : \n' + status)
+  logger.info('trying to post new tweet : \n ' + status)
   twit.post('statuses/update', { status: status }, function (
     error,
     data,

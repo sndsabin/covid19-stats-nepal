@@ -25,7 +25,7 @@ var observeDataChange = function (data) {
 
   // prepare message
   var message = messageUtils.prepareMessage(isMisleading, newRecord, delta)
-  logger.info('message: ' + message)
+  logger.info('message: \n ' + message)
 
   // notify
   twitter.tweet(message)
