@@ -32,11 +32,11 @@ var prepareMessage = function (isMisleading, newRecord, delta) {
   if (!isMisleading && delta.pcr_sample_tested) {
     message += '(+' + getNepaliNumber(delta.pcr_sample_tested) + ')'
   }
-  message +=
-    '\n RDT परिक्षण गरिएको : ' + getNepaliNumber(newRecord.rdt_sample_tested)
-  if (!isMisleading && delta.rdt_sample_tested) {
-    message += '(+' + getNepaliNumber(delta.rdt_sample_tested) + ')'
-  }
+  // message +=
+  //   '\n RDT परिक्षण गरिएको : ' + getNepaliNumber(newRecord.rdt_sample_tested)
+  // if (!isMisleading && delta.rdt_sample_tested) {
+  //   message += '(+' + getNepaliNumber(delta.rdt_sample_tested) + ')'
+  // }
 
   message +=
     '\n पछिल्लो तथ्यांक अपडेट : ' +
