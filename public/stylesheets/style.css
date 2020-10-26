@@ -242,13 +242,10 @@
 }
 
 /** Card **/
-@media (min-width: 768px) {
-  .card-header {
-    height: 110px;
-  }
-}
-@media (min-width: 992px) {
-  .card-header {
-    height: 82px;
+@media (max-width: 1200px) {
+  .card-columns {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
   }
 }

@@ -5,7 +5,7 @@
 </div>
 
 <div class="container">
-  <div class="card-deck mb-3 text-center">
+  <div class="card-columns mb-3 text-center">
     <div class="card mb-3 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">PCR परिक्षण गरिएको</h4>
@@ -53,6 +53,16 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">
           <%= getNepaliNumber(latest.death) %>
+        </h1>
+      </div>
+    </div>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">कुल RDT परीक्षण</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          <%= getNepaliNumber(latest.rdt_sample_tested) %>
         </h1>
       </div>
     </div>
