@@ -2,7 +2,7 @@
 
 <div align="center">
 <img width="200" src="docs/logo.jpg" alt="अधिसुचक" style="border-radius:100%">
-<p><a href="https://twitter.com/StatsNepal" target="_blank" rel="noopener">Bot</a> that tweets the Covid19 Stats Of Nepal.
+<p><a href="https://twitter.com/stats_nepal" target="_blank" rel="noopener">Bot</a> that tweets the Covid19 Stats Of Nepal.
 </div>
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
