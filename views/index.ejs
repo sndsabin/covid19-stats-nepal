@@ -22,7 +22,7 @@
       </div>
       <div class="card-body">
         <h1 class="card-title pricing-card-title">
-          <%= getNepaliNumber(latest.pcr_positive - (latest.recovered + latest.death)) %>
+          <%= getNepaliNumber(latest.pcr_positive - latest.recovered - latest.death) %>
         </h1>
       </div>
     </div>

@@ -20,8 +20,13 @@ var prepareMessage = function (isMisleading, newRecord, delta) {
   if (!isMisleading && delta.death) {
     message += '(+' + getNepaliNumber(delta.death) + ')'
   }
+  console.log(newRecord.pcr_positive)
+  console.log(newRecord.recovered)
+  console.log(newRecord.death)
+  console.log((newRecord.recovered + newRecord.death))
+  console.log(newRecord.pcr_positive - (newRecord.recovered + newRecord.death))
   message +=
-    '\n सक्रिय संक्रमित : ' + getNepaliNumber(newRecord.pcr_positive - (newRecord.recovered + newRecord.death))
+    '\n सक्रिय संक्रमित : ' + getNepaliNumber(newRecord.pcr_positive - newRecord.recovered - newRecord.death)
   message +=
     '\n कुल संक्रमण देखिएको (PCR) : ' + getNepaliNumber(newRecord.pcr_positive)
   if (!isMisleading && delta.pcr_positive) {
