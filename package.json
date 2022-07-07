@@ -36,7 +36,7 @@
     "get-nepali-number": "^0.2.0",
     "http-errors": "~1.6.3",
     "knex": "^0.21.1",
-    "moment": "^2.26.0",
+    "moment": "^2.29.4",
     "morgan": "~1.9.1",
     "node-cron": "^2.0.3",
     "pg": "^8.2.1",
